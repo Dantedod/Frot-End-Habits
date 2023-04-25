@@ -18,5 +18,3 @@ export function App() {
 
 
 
-//Componente: Tudo aquilo que a gente quer reaproveitar / isolar
-//Propriedade: Uma informação enviada para modificar um componente visual ou comportamentalmente

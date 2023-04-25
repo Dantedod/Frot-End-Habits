@@ -63,16 +63,14 @@ export function HabitsList({ date, onCompletedChange }: HabitsListProps) {
     <div className='mt-6 flex flex-col gap-3'>
       {habitsInfo?.possibleHabits.map(habit => {
         return (
-          //como o checkbox.root eh o primeiro elemento que vem dentro do map, ele precisa obrigatoriamente de uma key unica, ai botei habit.id pq n vao ter habitos duplicados
+
           <Checkbox.Root
             key={habit.id}
             onCheckedChange={() => {
-              handleToggleHabit(habit.id) //passando habit.id que eh a unica informação que precisa para chamar a api
+              handleToggleHabit(habit.id)
             }}
             checked={habitsInfo.completedHabits.includes(habit.id)}
-            disabled={isDateInPast}//desabilitando a pessoa poder clicar na checkbox em datas passadas
-            //esse group, permite que eu consiga fazer estilizações baseadas em propriedades que o check.rrot tem, porem dentro de outros elementos internos a ele
-            //na linha 45, eu usei o group-data, passando  ostate=checkled  para estilizar o checkbox(state=chekced aparece no f12, la nos dadso)
+            disabled={isDateInPast}
             className='flex items-center gap-3 group focus:outline-none disabled:cursor-not-allowed'
           >
 

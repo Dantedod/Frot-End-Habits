@@ -16,7 +16,6 @@ export function HabitDay({ defaultCompleted = 0, amount = 0, date }: HabitDayPro
 
   const completedPercentage = amount > 0 ? Math.round((completed / amount) * 100) : 0
 
-  //formt para pegar 2 ao msm tempo e get para pegar so 1 informação
   const dayAndMonth = dayjs(date).format('DD/MM')
   const dayOffWeek = dayjs(date).format('dddd')
 
@@ -47,7 +46,7 @@ export function HabitDay({ defaultCompleted = 0, amount = 0, date }: HabitDayPro
           <span className='mt-1 font-extrabold leading-tight text-3xl'>{dayAndMonth}</span>
 
           <ProgressBar progress={completedPercentage} />
-          {/* to passando pro componente Habitlist a data que ta vindo daquele componente(so clicar no date segurando o control que vai pra la) */}
+
           <HabitsList date={date} onCompletedChange={handleCompletedChanged} />
 
           <Popover.Arrow height={8} width={16} className='fill-zinc-900' />

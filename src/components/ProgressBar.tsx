@@ -10,8 +10,7 @@ export function ProgressBar(props: ProgressBarProps) {
         role='progressbar'
         aria-label='Progesso de hábitos completados nesse dia'
         aria-valuenow={props.progress}
-        //essa segunda chave, eh indicando q eu quero colocar uma variavel js, ai to passando um objeto
-        //uma para indicar que to colocando js e outra para indicar que eh uma objeto
+
 
         style={{ width: `${props.progress}%` }}
       />
